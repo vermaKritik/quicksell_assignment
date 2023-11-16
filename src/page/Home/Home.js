@@ -12,10 +12,12 @@ import {
   formattingForStatus,
   formattingForUsers,
 } from "../../util/dataFormattingHelper";
+import Loader from "../../components/shared/Loader/Loader";
 
 function Home() {
   const dispatch = useDispatch();
   const [rowData, setRowData] = useState([]);
+  const [loader, setLoader] = useState(false);
   const [displayData, setDisplayData] = useState([]);
   const [grouping, setGrouping] = useLocalStorage("grouping", "");
   const [ordering, setOrdering] = useLocalStorage("ordering", "");
@@ -23,9 +25,11 @@ function Home() {
   const filters = useSelector((state) => state.filtersSlice);
 
   const fetchData = async () => {
+    setLoader(true);
     const res = await getData();
     setRowData(res.data);
     dispatch(usersActions.setUsers(res.data.users));
+    setLoader(false);
   };
 
   useEffect(() => {
@@ -58,19 +62,27 @@ function Home() {
   return (
     <div className="home">
       <Nav />
-      <div className="home_main">
-        {displayData.map((el) => (
-          <DisplayColumn
-            element={el}
-            icon={el.icon}
-            type={filters.grouping}
-            key={el.key}
-            w={"19%"}
-            title={el.title}
-            data={el.data}
-          />
-        ))}
-      </div>
+      {loader && (
+        <div className="home_main">
+          <Loader />
+        </div>
+      )}
+
+      {!loader && (
+        <div className="home_main">
+          {displayData.map((el) => (
+            <DisplayColumn
+              element={el}
+              icon={el.icon}
+              type={filters.grouping}
+              key={el.key}
+              w={"19%"}
+              title={el.title}
+              data={el.data}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
