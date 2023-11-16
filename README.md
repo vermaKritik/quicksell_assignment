@@ -1,4 +1,5 @@
 # Quicksell Assignment
+### *Live Demo Link [link](https://quicksell-assignment-001.netlify.app/)*
 
 ## Screenshots of UI
 
