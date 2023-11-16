@@ -10,7 +10,6 @@ export const usersSlice = createSlice({
   initialState,
   reducers: {
     setUsers,
-    
   },
 });
 

@@ -10,7 +10,12 @@ function Card({ data, type }) {
     <div className="card">
       <div className="card_header">
         <p className="gray_title">{id}</p>
-        {type !== "users" && <Avatar name={users[userId].name} />}
+        {type !== "users" && (
+          <Avatar
+            name={users[userId]?.name}
+            available={users[userId]?.available}
+          />
+        )}
       </div>
       <div className="card_content">
         {/* <p>{data.priority}</p> */}
@@ -22,7 +27,7 @@ function Card({ data, type }) {
             <div>
               <div></div>
             </div>
-            <p>{el}</p>
+            <p style={{ fontSize: "14px" }}>{el}</p>
           </div>
         ))}
       </div>

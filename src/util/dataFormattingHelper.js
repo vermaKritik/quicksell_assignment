@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaCircleHalfStroke,
   FaCircleNotch,
@@ -155,6 +154,6 @@ export const formattingForUsers = (data) => {
   data.tickets.forEach((el) => {
     tempUsers[el.userId]?.data.push(el);
   });
-  console.log(Object.values(tempUsers));
+
   return Object.values(tempUsers);
 };

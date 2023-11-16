@@ -32,20 +32,17 @@ function Home() {
     fetchData();
   }, []);
 
-
   useEffect(() => {
     dispatch(filtersActions.setGrouping(grouping));
     dispatch(filtersActions.setOrdering(ordering));
   }, [dispatch, grouping, ordering]);
 
-
-
   useEffect(() => {
     console.log("data", rowData);
 
     let formatted;
-    
-    if(rowData.length===0) return;
+
+    if (rowData.length === 0) return;
 
     if (filters.grouping === "users") {
       formatted = formattingForUsers(rowData);
@@ -56,7 +53,6 @@ function Home() {
     }
 
     setDisplayData(formatted);
-
   }, [filters, rowData]);
 
   return (

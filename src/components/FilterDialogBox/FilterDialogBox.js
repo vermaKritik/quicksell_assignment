@@ -6,7 +6,7 @@ import { filtersActions } from "../../store/filtersSlice";
 
 function FilterDialogBox({ isOpen, onClose }) {
   const dispatch = useDispatch();
-  
+
   const [grouping, setGrouping] = useLocalStorage("grouping", "");
   const [ordering, setOrdering] = useLocalStorage("ordering", "");
 
@@ -32,10 +32,11 @@ function FilterDialogBox({ isOpen, onClose }) {
   return (
     <div className="filterDialogBox" onClick={(e) => e.stopPropagation()}>
       <div className="filterDialogBox_item">
-        <label for="grouping">Grouping</label>
+        <label htmlFor="grouping">Grouping</label>
 
         <select
           value={grouping}
+          className="filterDialogBox_dropdown"
           onChange={(el) => setGrouping(el.target.value)}
           name="grouping"
           id="grouping"
@@ -47,10 +48,11 @@ function FilterDialogBox({ isOpen, onClose }) {
       </div>
 
       <div className="filterDialogBox_item">
-        <label for="ordering">Ordering</label>
+        <label htmlFor="ordering">Ordering</label>
 
         <select
           value={ordering}
+          className="filterDialogBox_dropdown"
           onChange={(el) => setOrdering(el.target.value)}
           name="ordering"
           id="ordering"

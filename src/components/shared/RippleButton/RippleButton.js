@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./RippleButton.css"
+import "./RippleButton.css";
 
-const RippleButton = ({ children, onClick, noBorder}) => {
+const RippleButton = ({ children, onClick, noBorder }) => {
   const [coords, setCoords] = useState({ x: -1, y: -1 });
   const [isRippling, setIsRippling] = useState(false);
 
@@ -18,7 +18,7 @@ const RippleButton = ({ children, onClick, noBorder}) => {
 
   return (
     <button
-    style={noBorder && {border:"none",background:"transparent"}}
+      style={noBorder && { border: "none", background: "transparent" }}
       className="rippleButton"
       onClick={(e) => {
         const rect = e.target.getBoundingClientRect();

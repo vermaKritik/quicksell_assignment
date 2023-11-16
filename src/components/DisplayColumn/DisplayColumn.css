@@ -13,14 +13,10 @@
 .displayColumn_navTitle {
   font-weight: bold;
 }
-
-.displayColumn_navTitle>span {
+.displayColumn_navTitle > span {
   font-weight: normal;
   margin-left: 10px;
 }
-/* .displayColumn_nav > div {
-  gap: 1rem;
-} */
 .displayColumn_content {
   margin-top: 15px;
 }

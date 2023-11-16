@@ -8,10 +8,11 @@ function Nav() {
   const [showDialog, setShowDialog] = useState(false);
   return (
     <div className="nav">
-      <RippleButton onClick={() => {
-        setShowDialog(!showDialog)
-        console.log("hello");
-        }}>
+      <RippleButton
+        onClick={() => {
+          setShowDialog(!showDialog);
+        }}
+      >
         <div className="nav_button">
           <span>
             <BsListCheck />
