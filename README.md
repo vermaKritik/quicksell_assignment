@@ -16,3 +16,5 @@
 2. UI Buttons has ripple animations 
 3.  State of grouping and ordering is stored as per instructions
 4.   UI is build by using flex box which makes it more smooth and dynamic
+
+---
