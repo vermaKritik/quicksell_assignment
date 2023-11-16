@@ -1,10 +1,10 @@
 .home_main {
   padding: 20px 15px;
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
   width: 100%;
   background: #f4f5f8;
   display: flex;
-
+  overflow: overlay ;
   justify-content: space-between;
   /* border: 2px solid red; */
 }

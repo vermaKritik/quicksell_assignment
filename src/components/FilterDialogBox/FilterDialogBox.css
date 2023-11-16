@@ -7,6 +7,7 @@
   background: #fff;
   position: absolute;
   border: 1px solid rgb(216, 216, 216);
+  z-index: 99999;
 }
 .filterDialogBox_item {
   display: flex;

@@ -1,0 +1,25 @@
+.avatar_wrapper {
+  position: relative;
+}
+.avatar {
+  background: rgba(128, 128, 128, 0.361);
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.avatar > p {
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.avatar_small{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: rgb(207, 207, 207);
+    bottom: -5.5px;
+    right: -1px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}

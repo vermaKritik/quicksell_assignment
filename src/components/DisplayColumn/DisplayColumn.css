@@ -1,5 +1,5 @@
 .displayColumn {
-  /* min-width: 24%; */
+  min-width: 24px;
   margin-top: 10px;
   /* border: 2px solid palevioletred; */
   margin: 0 4px;
@@ -12,6 +12,11 @@
 }
 .displayColumn_navTitle {
   font-weight: bold;
+}
+
+.displayColumn_navTitle>span {
+  font-weight: normal;
+  margin-left: 10px;
 }
 /* .displayColumn_nav > div {
   gap: 1rem;
