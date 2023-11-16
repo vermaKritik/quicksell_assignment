@@ -1,0 +1,21 @@
+.filterDialogBox {
+  min-width: 250px;
+  top: 50px;
+  margin-left: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #fff;
+  position: absolute;
+  border: 1px solid rgb(216, 216, 216);
+}
+.filterDialogBox_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filterDialogBox_item > label {
+  color: #6a6a6a;
+}
+.filterDialogBox_item:last-child {
+  margin-top: 15px;
+}

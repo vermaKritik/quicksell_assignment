@@ -1,0 +1,29 @@
+.home_main {
+  padding: 20px 15px;
+  min-height: 100vh;
+  width: 100%;
+  background: #f4f5f8;
+  display: flex;
+
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+.box {
+  width: 20%;
+  margin-top: 10px;
+}
+.box_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box_navLeft,
+.box_navRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.box_content {
+  margin-top: 15px;
+}

@@ -1,0 +1,21 @@
+.displayColumn {
+  /* min-width: 24%; */
+  margin-top: 10px;
+  /* border: 2px solid palevioletred; */
+  margin: 0 4px;
+}
+.displayColumn_nav {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.displayColumn_navTitle {
+  font-weight: bold;
+}
+/* .displayColumn_nav > div {
+  gap: 1rem;
+} */
+.displayColumn_content {
+  margin-top: 15px;
+}
